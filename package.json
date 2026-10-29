@@ -1,0 +1,12 @@
+{
+  "name": "nism-sebi-data-collector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manual one-record-at-a-time SEBI directory capture tool for the NISM Placement Committee.",
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

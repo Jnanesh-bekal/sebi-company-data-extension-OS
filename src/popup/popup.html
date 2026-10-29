@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NISM SEBI Data Collector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>NISM SEBI Data Collector</h1>
+  <p class="muted">Open the SEBI Merchant Bankers directory and click <b>+ Capture to NISM Sheet</b> under a firm. Records are collected only when you click Capture — one firm at a time.</p>
+  <dl>
+    <dt>Destination</dt><dd id="dest"></dd>
+    <dt>Backend URL</dt><dd id="endpoint"></dd>
+    <dt>Last capture</dt><dd id="last">None yet</dd>
+  </dl>
+  <div class="row">
+    <button id="openSheet" type="button">Open Google Sheet</button>
+    <button id="openSebi" type="button">Open SEBI directory</button>
+  </div>
+  <div class="row">
+    <button id="openOptions" type="button" class="secondary">Settings</button>
+    <button id="diagnose" type="button" class="secondary">Check this page</button>
+  </div>
+  <p id="diag" class="muted" role="status"></p>
+  <script src="../common/constants.js"></script>
+  <script src="../common/validation.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "NISM SEBI Data Collector",
+  "version": "1.0.0",
+  "description": "Manually capture one SEBI Merchant Banker record at a time into the NISM Placement Committee Google Sheet.",
+  "minimum_chrome_version": "102",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://script.google.com/*",
+    "https://script.googleusercontent.com/*",
+    "https://accounts.google.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.sebi.gov.in/sebiweb/other/OtherAction.do*",
+        "https://sebi.gov.in/sebiweb/other/OtherAction.do*"
+      ],
+      "js": [
+        "src/common/constants.js",
+        "src/common/normalization.js",
+        "src/common/validation.js",
+        "src/extractors/sebiMerchantBankers.js",
+        "src/content/contentScript.js"
+      ],
+      "css": ["src/content/contentStyles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "NISM SEBI Data Collector",
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  }
+}
