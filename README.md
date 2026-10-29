@@ -1,7 +1,7 @@
-# NISM SEBI Data Collector
+# SEBI Data Collector
 
-Chrome extension (Manifest V3) + Google Apps Script backend for the NISM PGDM Placement Committee.
-You open the SEBI Merchant Bankers directory, click **+ Capture to NISM Sheet** under ONE firm, and that
+Chrome extension (Manifest V3) + Google Apps Script backend for College.
+You open the SEBI Merchant Bankers directory, click **+ Capture to Sheet** under ONE firm, and that
 firm's record is appended to the `SEBI Merchant Bankers` tab of the placement Google Sheet.
 
 **It never scrapes in bulk.** No auto-capture, no auto-pagination, no messaging. One click = one record.
